@@ -2233,7 +2233,7 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
         <translation type="unfinished"/>
     </message>
     <message>

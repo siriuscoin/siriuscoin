@@ -2250,8 +2250,8 @@ Cím: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Maximálisan &lt;n&gt; számú kapcsolat fenntartása a peerekkel (alapértelmezés: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Maximálisan &lt;n&gt; számú kapcsolat fenntartása a peerekkel (alapértelmezés: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

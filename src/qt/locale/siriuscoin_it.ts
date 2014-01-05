@@ -2251,8 +2251,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Mantieni al massimo &lt;n&gt; connessioni ai peer (default: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Mantieni al massimo &lt;n&gt; connessioni ai peer (default: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

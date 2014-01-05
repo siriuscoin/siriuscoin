@@ -2243,8 +2243,8 @@ Adress: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Ha som mest &lt;n&gt; anslutningar till andra klienter (förvalt: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Ha som mest &lt;n&gt; anslutningar till andra klienter (förvalt: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

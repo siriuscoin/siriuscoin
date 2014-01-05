@@ -2245,8 +2245,8 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Μέγιστες αριθμός συνδέσεων με τους peers &lt;n&gt; (προεπιλογή: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Μέγιστες αριθμός συνδέσεων με τους peers &lt;n&gt; (προεπιλογή: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

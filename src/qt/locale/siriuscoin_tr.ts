@@ -2242,8 +2242,8 @@ Adres: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Eşler ile en çok &lt;n&gt; adet bağlantı kur (varsayılan: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Eşler ile en çok &lt;n&gt; adet bağlantı kur (varsayılan: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

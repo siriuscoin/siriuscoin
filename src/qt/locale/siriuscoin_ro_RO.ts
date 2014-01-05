@@ -2233,8 +2233,8 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Se menține la cele mai multe conexiuni &lt;n&gt; cu colegii (implicit: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Se menține la cele mai multe conexiuni &lt;n&gt; cu colegii (implicit: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

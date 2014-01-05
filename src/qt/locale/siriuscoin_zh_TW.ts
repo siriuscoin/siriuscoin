@@ -2249,8 +2249,8 @@ Address: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>維持與節點連線數的上限為 &lt;n&gt; 個 (預設: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>維持與節點連線數的上限為 &lt;n&gt; 個 (預設: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

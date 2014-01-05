@@ -2252,8 +2252,8 @@ Dirección: %4</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Mantener al menos &lt;n&gt; conecciones por cliente (por defecto: 125) </translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Mantener al menos &lt;n&gt; conecciones por cliente (por defecto: 250) </translation>
     </message>
     <message>
         <location line="-48"/>

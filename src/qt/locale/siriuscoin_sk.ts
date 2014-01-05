@@ -2236,8 +2236,8 @@ Adresa: %4</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Udržiavať maximálne &lt;n&gt; spojení (predvolené: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Udržiavať maximálne &lt;n&gt; spojení (predvolené: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

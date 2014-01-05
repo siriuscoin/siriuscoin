@@ -1089,7 +1089,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 
 static const int64 nTargetTimespan = 2 * 60; // Two minute
 static const int64 nTargetSpacing = 30; // Thirty second
-static const int64 nInterval = nTargetTimespan / nTargetSpacing; // Re-target every four blocks
+static const int64 nInterval = nTargetTimespan / nTargetSpacing; // Re-target every Four blocks
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1154,12 +1154,16 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     assert(pindexFirst);
 
     // Limit adjustment step
-    int64 nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
+	int64 nActualTimespan;
+	if (pindexLast->GetBlockTime() > pindexFirst->GetBlockTime())
+		nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
+	if (pindexLast->GetBlockTime() < pindexFirst->GetBlockTime())
+		nActualTimespan = pindexFirst->GetBlockTime() - pindexLast->GetBlockTime();
     printf("  nActualTimespan = %"PRI64d"  before bounds\n", nActualTimespan);
-//	if (nActualTimespan < nTargetTimespan/10)
-//		nActualTimespan = nTargetTimespan/10;
-//	if (nActualTimespan > nTargetTimespan*10)
-//		nActualTimespan = nTargetTimespan*10;
+//	if (nActualTimespan < nTargetTimespan/100)
+//		nActualTimespan = nTargetTimespan/100;
+//	if (nActualTimespan > nTargetTimespan*100)
+//		nActualTimespan = nTargetTimespan*100;
 
     // Retarget
     CBigNum bnNew;
@@ -1167,8 +1171,8 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
     bnNew *= nActualTimespan;
     bnNew /= nTargetTimespan;
 
-//	if (bnNew > bnProofOfWorkLimit)
-//		bnNew = bnProofOfWorkLimit;
+	if (bnNew > bnProofOfWorkLimit)
+		bnNew = bnProofOfWorkLimit;
 
     /// debug print
     printf("GetNextWorkRequired RETARGET\n");
@@ -2792,9 +2796,9 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1388534400; //bitcoin block.nTime = 1231006505
+        block.nTime    = 1388534400;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 311; //bitcoin block.nNonce = 2083236893
+        block.nNonce   = 311;
 
         if (fTestNet)
         {
@@ -2803,14 +2807,6 @@ bool InitBlockIndex() {
         }
 
 		uint256 hash = block.GetHash();
-
-//		generate genesis block ***test***
-//		printf("generating genesis block...");
-//		while (hash > bnProofOfWorkLimit.getuint256())
-//		{
-//			block.nNonce ++;
-//			hash = block.GetHash();
-//		}
 
         // debug print
 		printf("debug:\n");
@@ -4652,7 +4648,7 @@ void static SiriuscoinMiner(CWallet *pwallet)
 
         while (true)
         {
-//			unsigned int nHashesDone = 0;
+			unsigned int nHashesDone = 0;
 //			unsigned int nNonceFound;
 			hash = pblock->GetHash();
             // Crypto++ SHA256
@@ -4690,7 +4686,7 @@ void static SiriuscoinMiner(CWallet *pwallet)
                 nHashCounter = 0;
             }
             else
-//				nHashCounter += nHashesDone;
+				nHashCounter += nHashesDone;
             if (GetTimeMillis() - nHPSTimerStart > 4000)
             {
                 static CCriticalSection cs;
@@ -4701,12 +4697,12 @@ void static SiriuscoinMiner(CWallet *pwallet)
                         dHashesPerSec = 1000.0 * nHashCounter / (GetTimeMillis() - nHPSTimerStart);
                         nHPSTimerStart = GetTimeMillis();
                         nHashCounter = 0;
-//						static int64 nLogTime;
-//						if (GetTime() - nLogTime > 30 * 60)
-//						{
-//							nLogTime = GetTime();
-                            printf("hashmeter %6.0f khash/s\n", dHashesPerSec/1000.0);
-//						}
+						static int64 nLogTime;
+						if (GetTime() - nLogTime > 30 * 60)
+						{
+							nLogTime = GetTime();
+							printf("hashmeter %6.0f khash/s\n", dHashesPerSec/1000.0);
+						}
                     }
                 }
             }

@@ -2240,8 +2240,8 @@ Adresas: %4</translation>
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Palaikyti ne daugiau &lt;n&gt; jungčių kolegoms (pagal nutylėjimą: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Palaikyti ne daugiau &lt;n&gt; jungčių kolegoms (pagal nutylėjimą: 250)</translation>
     </message>
     <message>
         <location line="-48"/>

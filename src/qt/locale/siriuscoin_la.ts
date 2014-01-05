@@ -2241,8 +2241,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Manutene non plures quam &lt;n&gt; conexiones ad paria (praedefinitum: 125)</translation>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 250)</source>
+        <translation>Manutene non plures quam &lt;n&gt; conexiones ad paria (praedefinitum: 250)</translation>
     </message>
     <message>
         <location line="-48"/>
